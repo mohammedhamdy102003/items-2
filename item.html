@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>E-commerce project</title>
+</head>
+<body>
+    <header>
+    <div class="container navbar">
+        
+            <a href="#" class="logo1"><img src="img/logo-black.png" alt=""></a>
+            <form action="" class="search">
+                <input type="search" placeholder="Search for products">
+                <button type="submit">Search</button>
+
+            </form>
+            <div class="cart-header">
+                <div onclick="open_cart()" class="cart-icon">
+                    <i class="fa-solid fa-bag-shopping" id="fa-shop"></i>
+                    <spam class="count_icon">0</spam>
+                </div>
+                <div class="price">
+                    <p>My Card</p>
+                    <p class="price_card_header">$0</p>
+                </div>
+
+            </div>
+        
+    </div>
+    <nav>
+        <div class="links container">
+            <i onclick="open_menu()" class="fa-solid fa-bars btn_open_menu"></i>
+            <ul id="menu">
+                <span onclick="close_menu()" class="bg_ovelay"></span>
+                <i onclick="close_menu()"  class="fa-regular fa-circle-xmark btn_close_menu"></i>
+                <img class= "logo_menu" src="img/logo-black.png" alt="">
+                <li class="active"><a href="">Home</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+            <div class="login_signup">
+                <a href="">Login<i class="fa-solid fa-right-to-bracket"></i></a>
+                <a href="">Sign UP<i class="fa-solid fa-user-plus"></i></a>
+            </div>
+
+        </div>
+    </nav>
+</header>
+<div class="cartd">
+    <div class="top-card">
+        <h3>My Card <span class="count_item_cart">(0 Item in Cart)</span></h3>
+        <span  onclick="close_cart()" class="closed-icon"><i class="fa-regular fa-circle-xmark"></i></span>
+    </div>
+    <div class="items_cart">
+        
+
+    </div>
+    <div class="bottom-cart">
+        <div class="total">
+            <p>Cart Subtotal</p>
+            <p class="total_cost">$0</p>
+        </div>
+        <div class="bottom-price">
+            <a href="#" class="p1">Proceed to Checkout</a>
+            <button class="p1 trans">Shop More</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="item_detail">
+    <div class="container">
+        <div class="img_item">
+            <div class="big_img">
+                <img src="img/product/product-1.jpg" alt="" id="big_img">
+            </div>
+            <div class="small_img">
+                <img onclick="changeitemimg(this.src)"  src="img/product/product-1.jpg" alt="">
+                <img onclick="changeitemimg(this.src)"  src="img/product/product1.jpg" alt="">
+                <img onclick="changeitemimg(this.src)"   src="img/product/product-8.jpg" alt="">
+                <img onclick="changeitemimg(this.src)"    src="img/product/product8.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="details_item">
+            <h1 class="name">Original Mobile Android Dual SIM Smart Phone G3</h1>
+            <div class="stars">
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+
+            <div class="price">
+               <p> <span>$350</span></p>
+               <p class="old_price">$450</p>
+
+            </div>
+
+            <h5>Aviliability : <span>In Stock</span></h5>
+            <h5>SKU: <span>Samsung C49J85: $350 ,Debenhams Plus </span></h5>
+            <p class="text4">
+             Officiis nam maxime non ullam ipsa! Blanditiis laboriosam soluta eius quod corrupti esse tempora harum sed ea quibusdam neque nesciunt earum
+             autem quas a eum iste. Distinctio sapiente, dolorem ratione eligendi beatae culpa corrupti soluta fugiat ullam recusandae inventore veritatis.
+
+            </p>
+            <button>Add to Cart<i class="fa-solid fa-cart-shopping"></i></button>
+            <div class="icons">
+                <span><i class="fa-solid fa-heart"></i></span>
+                  <span><i class="fa-solid fa-share"></i></span>
+                  <span><i class="fa-solid fa-sliders"></i></span>
+                  <span><i class="fa-solid fa-print"></i></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<section class="slide slide-sale">
+    <div class="container">
+        <div class="sale-sac mySwiper">
+            <div class="top-slide">
+                <h2>On Sale <span>product</span></h2>
+            </div>
+            <div id="swiper_items_sale" class="productss swiper-wrapper">
+                <!-- المحتوى سيتم إضافته هنا من خلال الجافاسكريبت -->
+            </div>
+
+            <div class="swipper-button-next btn-swap"></div>
+            <div class="swipper-button-prev btn-swap"></div>
+        </div>
+    </div>
+</section>
+
+
+
+
+        <footer>
+            <div class="container">
+                <div class="big_row">
+                    <img src="img/logo-white.png" alt="">
+                    <div class="hotline">
+                        <i class="fa-solid fa-headset"></i>
+                        <div class="text">
+                            <h5>Hotline Free 24/24:</h5>
+                            <h6>(+20)1014580563</h6>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <h4>FAQs & Help </h4>
+                    <div class="link">
+                        <a href="#">F.A.Q</a>
+                        <a href="#">Ordering Tracking</a>
+                        <a href="#">Contacts</a>
+                        <a href="#">Events</a>
+                        <a href="#">Help Center</a>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <h4>Shipping & Delivery</h4>
+                    <div class="link">
+                        <a href="#">Delivery Information</a>
+                        <a href="#">Discount</a>
+                        <a href="#">Payment & Shipping</a>
+                        <a href="#">Estimited Delivery Time</a>
+                        <a href="#">Shipping Guide</a>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <h4>Information</h4>
+                    <div class="link">
+                        <a href="#">Popular</a>
+                        <a href="#">Our Services</a>
+                        <a href="#">Your Account</a>
+                        <a href="#">Privacy & Policy</a>
+                        <a href="#">Terms & Condition</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="bottom_footer">
+                <div class="container">
+                    <p style="color: aliceblue;">CopyRights &copy;<span>Topico.</span> All Rights Reserved</p>
+                    <div class="payment_footer">
+                        <img src="img/payment-1.png" alt="">
+                        <img src="img/payment-2.png" alt="">
+                        <img src="img/payment-3.png" alt="">
+                        <img src="img/payment-4.png" alt="">
+
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="swiper.js"></script>
+<script src="items2.js"></script>
+    
+<script src="main.js"></script>
+</body>
+</html>
